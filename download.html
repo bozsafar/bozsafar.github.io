@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boz Safar — App Download</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+    background: linear-gradient(160deg, #052e1f 0%, #0b3d2e 55%, #0e4d38 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+  .card {
+    width: 100%;
+    max-width: 430px;
+    text-align: center;
+  }
+  .crown { font-size: 40px; }
+  h1 { font-size: 44px; font-weight: 800; letter-spacing: .5px; margin: 6px 0 4px; }
+  h1 .boz { color: #ff2d2d; }
+  h1 .safar { color: #ffffff; }
+  .tagline { color: #ffd968; font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+  .sub { color: #cfe8da; font-size: 15px; line-height: 1.55; margin-bottom: 10px; }
+  #brandLine { color: #9fd8bb; font-size: 14px; min-height: 20px; margin-bottom: 14px; }
+  .btn {
+    display: block;
+    text-decoration: none;
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin: 12px 0;
+    text-align: left;
+  }
+  .btn .t { display: block; font-size: 20px; font-weight: 800; }
+  .btn .d { display: block; font-size: 14px; margin-top: 3px; opacity: .92; line-height: 1.45; }
+  .btn-passenger { background: #ffd968; color: #123524; }
+  .btn-driver { background: #ffffff; color: #0b3d2e; }
+  .btn-whatsapp { background: #25d366; color: #06301f; }
+  .rates {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #e6f3ec;
+    margin-top: 16px;
+  }
+  .foot { margin-top: 18px; font-size: 13px; color: #9fc7b2; line-height: 1.6; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="crown">👑</div>
+    <h1><span class="boz">Boz</span> <span class="safar">Safar</span></h1>
+    <div class="tagline">Bharose ki sawari</div>
+    <p class="sub">Pakistan ki apni ride service — filhaal Karachi mein.
+      Apni app download karein aur shuru karein.</p>
+    <p id="brandLine"></p>
+
+    <a class="btn btn-passenger" href="https://github.com/bozdarstudio/bozdar-safar/releases/download/split-check/Boz.Safar.Passenger.apk">
+      <span class="t">🚖 Musafir App</span>
+      <span class="d">Ride book karne ke liye — rickshaw, bike, car, sab ek hi app mein.</span>
+    </a>
+
+    <a class="btn btn-driver" href="https://github.com/bozdarstudio/bozdar-safar/releases/download/split-check/Boz.Safar.Driver.apk">
+      <span class="t">🛺 Driver App</span>
+      <span class="d">Driver bhaiyon ke liye — ride lein, kamai karein, saaf hisaab ke saath.</span>
+    </a>
+
+    <a class="btn btn-whatsapp" href="https://wa.me/923329467211">
+      <span class="t">💬 WhatsApp par rabta karein</span>
+      <span class="d">Koi sawal ho ya madad chahiye ho — company ke WhatsApp number par message karein.</span>
+    </a>
+
+    <div class="rates">
+      Rickshaw Rs50/km · Bike Rs30/km · Car Rs70/km<br>
+      Service fee saaf 10% — koi chhupi katauti nahi<br>
+      Kam az kam kiraya Rs150
+    </div>
+
+    <p class="foot">Download ke baad file kholein aur “Install” dabayein.<br>
+      Boz Safar — tay kiraya, saaf hisaab.</p>
+  </div>
+
+<script>
+  var ua = navigator.userAgent || '';
+  var brand = '';
+  if (/SM-|SamsungBrowser/i.test(ua)) brand = 'Samsung';
+  else if (/Infinix/i.test(ua)) brand = 'Infinix';
+  else if (/TECNO/i.test(ua)) brand = 'Tecno';
+  else if (/itel/i.test(ua)) brand = 'itel';
+  else if (/Redmi|POCO|Xiaomi/i.test(ua)) brand = 'Xiaomi / Redmi';
+  else if (/OPPO/i.test(ua)) brand = 'Oppo';
+  else if (/Realme/i.test(ua)) brand = 'Realme';
+  else if (/vivo/i.test(ua)) brand = 'Vivo';
+  else if (/HUAWEI|HONOR/i.test(ua)) brand = 'Huawei / Honor';
+  else if (/Pixel/i.test(ua)) brand = 'Google Pixel';
+  else if (/Android/i.test(ua)) brand = 'Android';
+  if (brand) {
+    document.getElementById('brandLine').textContent =
+      'Aap ka phone: ' + brand + ' — neeche apni app download karein.';
+  }
+</script>
+</body>
+</html>
